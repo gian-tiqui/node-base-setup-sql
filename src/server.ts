@@ -7,7 +7,7 @@ import app from "./app";
 import { prisma } from "@/config/database";
 import { redis } from "@/config/redis";
 
-const PORT = process.env.PORT || 3000;
+const PORT = process.env.PORT || 8087;
 
 // Database connection test
 async function connectDatabase() {

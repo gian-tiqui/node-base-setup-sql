@@ -74,7 +74,7 @@ A robust Node.js authentication boilerplate with TypeScript, Prisma ORM, Postgre
    JWT_REFRESH_SECRET=your-super-secret-jwt-refresh-key-here
    JWT_ACCESS_EXPIRE=14m
    JWT_REFRESH_EXPIRE=7d
-   PORT=3000
+   PORT=8087
    NODE_ENV=development
    REDIS_HOST=localhost
    REDIS_PORT=6379
@@ -156,7 +156,7 @@ npm run db:seed      # Seed database with initial data
 ### Register User
 
 ```bash
-curl -X POST http://localhost:3000/api/v1/auth/register \
+curl -X POST http://localhost:8087/api/v1/auth/register \
   -H "Content-Type: application/json" \
   -d '{
     "firstName": "John",
@@ -171,7 +171,7 @@ curl -X POST http://localhost:3000/api/v1/auth/register \
 ### Login
 
 ```bash
-curl -X POST http://localhost:3000/api/v1/auth/login \
+curl -X POST http://localhost:8087/api/v1/auth/login \
   -H "Content-Type: application/json" \
   -d '{
     "employeeId": "EMP001",
@@ -182,14 +182,14 @@ curl -X POST http://localhost:3000/api/v1/auth/login \
 ### Get Profile (Protected Route)
 
 ```bash
-curl -X GET http://localhost:3000/api/v1/auth/profile \
+curl -X GET http://localhost:8087/api/v1/auth/profile \
   -H "Authorization: Bearer YOUR_ACCESS_TOKEN"
 ```
 
 ### Get All Users (Admin Only)
 
 ```bash
-curl -X GET "http://localhost:3000/api/v1/users?page=1&limit=10&search=john" \
+curl -X GET "http://localhost:8087/api/v1/users?page=1&limit=10&search=john" \
   -H "Authorization: Bearer YOUR_ADMIN_ACCESS_TOKEN"
 ```
 
