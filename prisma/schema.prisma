@@ -16,7 +16,7 @@ model User {
   middleName    String?   @db.VarChar(50)
   lastName      String    @db.VarChar(50)
   phoneNumber   String    @unique @db.VarChar(20)
-  employeeId    String    @unique @db.VarChar(20)
+  employeeId    String    @unique @db.VarChar(8)
   email         String    @unique @db.VarChar(255)
   password      String    @db.VarChar(255)
   role          Role      @default(USER)
