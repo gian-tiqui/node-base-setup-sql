@@ -24,7 +24,6 @@ async function connectDatabase() {
 async function connectRedis() {
   try {
     await redis.ping();
-    console.log("✅ Connected to Redis");
   } catch (error) {
     console.error("❌ Failed to connect to Redis:", error);
     // Redis is optional for caching, so don't exit process

@@ -26,7 +26,7 @@ model User {
   createdAt     DateTime  @default(now())
   updatedAt     DateTime  @updatedAt
 
-  @@map("users")
+  @@map("users") // Instead of having table named User, it will be named users
 }
 
 enum Role {

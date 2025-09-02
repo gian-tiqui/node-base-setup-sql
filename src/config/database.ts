@@ -1,5 +1,6 @@
 import { PrismaClient } from "@prisma/client";
 
+// Uncommenting the log will log the query everytime the user makes a request
 const prisma = new PrismaClient({
   // log:
   //   process.env.NODE_ENV === "development"
